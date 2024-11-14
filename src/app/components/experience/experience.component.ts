@@ -1,15 +1,19 @@
 // src/app/components/experience/experience.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CvService } from '../../services/cv.service';
 import { Experience } from '../../interfaces/cv.interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.css'],
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
 })
+
 export class ExperienceComponent implements OnInit {
   experiences: Experience[] = [];
   experienceForm: FormGroup;
