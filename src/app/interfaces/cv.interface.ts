@@ -1,4 +1,4 @@
-// src/app/interfaces/cv.interface.ts
+
 
 export interface Experience {
   id?: number;
